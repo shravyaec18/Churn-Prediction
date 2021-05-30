@@ -113,6 +113,11 @@ def predict():
 
     output = prediction[0,1]
     
+    if output>=0.3:
+        output = Churn 
+        else:
+            output = Not churn
+    
   
     return render_template('index.html', prediction_text='Churn probability is {}'.format(output))
 
